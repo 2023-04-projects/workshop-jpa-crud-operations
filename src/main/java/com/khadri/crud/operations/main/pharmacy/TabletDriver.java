@@ -1,9 +1,9 @@
-package com.khadri.crud.operations.main;
+package com.khadri.crud.operations.main.pharmacy;
 
 import java.util.Scanner;
 
-import com.khadri.crud.operations.pharmacy.Tablet;
-import com.khadri.crud.operations.repository.TabletEntityManagerRepsoitory;
+import com.khadri.crud.operations.entity.pharmacy.Tablet;
+import com.khadri.crud.operations.repository.pharmacy.TabletEntityManagerRepsoitory;
 
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;

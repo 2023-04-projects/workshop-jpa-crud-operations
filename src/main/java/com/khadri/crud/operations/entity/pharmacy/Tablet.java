@@ -1,4 +1,4 @@
-package com.khadri.crud.operations.pharmacy;
+package com.khadri.crud.operations.entity.pharmacy;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
