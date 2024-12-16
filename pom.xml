@@ -28,6 +28,11 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<version>9.1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.khadri.hibernate</groupId>
+			<artifactId>jsp-app-1</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
