@@ -1,0 +1,1 @@
+create table product(prodId int auto_increment primary key, prodName varchar(200), qty int, price double);
