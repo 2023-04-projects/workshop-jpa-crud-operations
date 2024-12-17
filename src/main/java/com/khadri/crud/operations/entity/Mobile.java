@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class MobileEntity {
+public class Mobile {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,7 +49,7 @@ public class MobileEntity {
 
 	@Override
 	public String toString() {
-		return "MobileEntity [id=" + id + ", name=" + name + ", phoneNumber=" + phoneNumber + ", price=" + price + "]";
+		return "Mobile [id=" + id + ", name=" + name + ", phoneNumber=" + phoneNumber + ", price=" + price + "]";
 	}
 	
 }

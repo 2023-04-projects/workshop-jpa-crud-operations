@@ -1,37 +1,37 @@
 package com.khadri.crud.operations.repository;
 
-import com.khadri.crud.operations.entity.MobileEntity;
+import com.khadri.crud.operations.entity.Mobile;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 
-public class MobileEntityManagerRepository {
+public class MobileManagerRepository {
 
 	private EntityManagerFactory entityManagerFactory;
 
-	public MobileEntityManagerRepository(EntityManagerFactory entityManagerFactory) {
+	public MobileManagerRepository(EntityManagerFactory entityManagerFactory) {
 		this.entityManagerFactory = entityManagerFactory;
 	}
 
-	public void insertMobile(MobileEntity mobile) {
+	public void insertMobile(Mobile mobile) {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
 		entityManager.persist(mobile);
 		entityManager.getTransaction().commit();
 	}
 
-	public MobileEntity updateMobile(MobileEntity mobile) {
+	public Mobile updateMobile(Mobile mobile) {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
-		MobileEntity updateMobile = entityManager.merge(mobile);
+		Mobile updateMobile = entityManager.merge(mobile);
 		entityManager.getTransaction().commit();
 		return updateMobile;
 	}
 
-	public MobileEntity selectMobile(Integer id) {
+	public Mobile selectMobile(Integer id) {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
-		MobileEntity findMobile = entityManager.find(MobileEntity.class, id);
+		Mobile findMobile = entityManager.find(Mobile.class, id);
 		entityManager.getTransaction().commit();
 
 		return findMobile;
@@ -40,11 +40,9 @@ public class MobileEntityManagerRepository {
 	public void deleteMobile(Integer id) {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
-		MobileEntity removeMobile = entityManager.find(MobileEntity.class, id);
+		Mobile removeMobile = entityManager.find(Mobile.class, id);
 		entityManager.remove(removeMobile);
 		entityManager.getTransaction().commit();
 	}
 
-	
-	}
-
+}
