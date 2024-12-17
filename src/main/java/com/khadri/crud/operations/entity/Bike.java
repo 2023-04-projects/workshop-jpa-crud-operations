@@ -1,4 +1,4 @@
-package com.khadri.crud.operations.entity.bike;
+package com.khadri.crud.operations.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

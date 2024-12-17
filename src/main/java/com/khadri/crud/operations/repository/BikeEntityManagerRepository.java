@@ -1,14 +1,14 @@
-package com.khadri.crud.operations.repository.bike;
+package com.khadri.crud.operations.repository;
 
-import com.khadri.crud.operations.entity.bike.Bike;
+import com.khadri.crud.operations.entity.Bike;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 
-public class BikeManagerRepository {
+public class BikeEntityManagerRepository {
 	private EntityManagerFactory entityManagerFactory;
 
-	public BikeManagerRepository(EntityManagerFactory entityManagerFactory) {
+	public BikeEntityManagerRepository(EntityManagerFactory entityManagerFactory) {
 		this.entityManagerFactory = entityManagerFactory;
 	}
 
