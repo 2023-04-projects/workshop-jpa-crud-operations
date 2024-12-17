@@ -8,10 +8,10 @@ import com.khadri.crud.operations.repository.EmployeeEntityManagerRepsitory;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class EmployeeDriver {
+public class EmployeeEntityDriver {
 
 	public static void main(String[] args) {
-		EmployeeDriver empDriver = new EmployeeDriver();
+		EmployeeEntityDriver empDriver = new EmployeeEntityDriver();
 
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE_UNIT");
 		EmployeeEntityManagerRepsitory repository = new EmployeeEntityManagerRepsitory(entityManagerFactory);
