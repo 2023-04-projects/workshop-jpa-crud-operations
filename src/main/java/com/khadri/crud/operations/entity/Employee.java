@@ -1,4 +1,4 @@
-package com.khadri.curd.operation.employee.entity;
+package com.khadri.crud.operations.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

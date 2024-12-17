@@ -1,6 +1,6 @@
-package com.khadri.curd.operation.employee.repository;
+package com.khadri.crud.operations.repository;
 
-import com.khadri.curd.operation.employee.entity.Employee;
+import com.khadri.crud.operations.entity.Employee;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
