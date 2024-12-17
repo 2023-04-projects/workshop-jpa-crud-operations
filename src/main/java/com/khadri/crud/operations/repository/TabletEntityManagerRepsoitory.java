@@ -1,6 +1,6 @@
-package com.khadri.crud.operations.repository.pharmacy;
+package com.khadri.crud.operations.repository;
 
-import com.khadri.crud.operations.entity.pharmacy.Tablet;
+import com.khadri.crud.operations.entity.Tablet;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

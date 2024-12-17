@@ -1,9 +1,9 @@
-package com.khadri.crud.operations.main.pharmacy;
+package com.khadri.crud.operations.main;
 
 import java.util.Scanner;
 
-import com.khadri.crud.operations.entity.pharmacy.Tablet;
-import com.khadri.crud.operations.repository.pharmacy.TabletEntityManagerRepsoitory;
+import com.khadri.crud.operations.entity.Tablet;
+import com.khadri.crud.operations.repository.TabletEntityManagerRepsoitory;
 
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -84,6 +84,7 @@ public class TabletDriver {
 	private Tablet createTablet(Integer id, String tabletName, int tabletQty, double tabletPrice) {
 
 		Tablet tablet = new Tablet();
+		tablet.setId(id);
 		tablet.setTabletName(tabletName);
 		tablet.setTabletQty(tabletQty);
 		tablet.setTabletPrice(tabletPrice);

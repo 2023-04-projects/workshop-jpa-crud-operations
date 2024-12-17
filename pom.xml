@@ -7,11 +7,9 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<name>workshop-jpa-crud-operations</name>
 	<description>workshop-jpa-crud-operations</description>
-
 	<properties>
 		<java.version>17</java.version>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>jakarta.persistence</groupId>
@@ -28,13 +26,7 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<version>9.1.0</version>
 		</dependency>
-		<dependency>
-			<groupId>com.khadri.hibernate</groupId>
-			<artifactId>jsp-app-1</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -48,5 +40,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
