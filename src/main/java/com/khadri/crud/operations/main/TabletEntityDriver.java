@@ -8,9 +8,9 @@ import com.khadri.crud.operations.repository.TabletEntityManagerRepsoitory;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class TabletDriver {
+public class TabletEntityDriver {
 	public static void main(String[] args) {
-		TabletDriver tabletDriver = new TabletDriver();
+		TabletEntityDriver tabletDriver = new TabletEntityDriver();
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE_UNIT");
 		TabletEntityManagerRepsoitory tabletEntityManagerRepsoitory = new TabletEntityManagerRepsoitory(
 				entityManagerFactory);
