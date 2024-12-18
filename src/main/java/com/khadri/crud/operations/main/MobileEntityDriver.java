@@ -3,19 +3,19 @@ package com.khadri.crud.operations.main;
 import java.util.Scanner;
 
 import com.khadri.crud.operations.entity.Mobile;
-import com.khadri.crud.operations.repository.MobileManagerRepository;
+import com.khadri.crud.operations.repository.MobileEntityManagerRepository;
 
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class MobileDriver {
+public class MobileEntityDriver {
 
 	public static void main(String[] args) {
 
-		MobileDriver mobileEntity = new MobileDriver();
+		MobileEntityDriver mobileEntity = new MobileEntityDriver();
 
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE_UNIT");
-		MobileManagerRepository repository = new MobileManagerRepository(entityManagerFactory);
+		MobileEntityManagerRepository repository = new MobileEntityManagerRepository(entityManagerFactory);
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Please choose Operation (ADD/MODIFY/SELECT/DELETE) value:");

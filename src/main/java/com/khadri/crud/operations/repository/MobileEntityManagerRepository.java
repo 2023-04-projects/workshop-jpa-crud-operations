@@ -5,11 +5,11 @@ import com.khadri.crud.operations.entity.Mobile;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 
-public class MobileManagerRepository {
+public class MobileEntityManagerRepository {
 
 	private EntityManagerFactory entityManagerFactory;
 
-	public MobileManagerRepository(EntityManagerFactory entityManagerFactory) {
+	public MobileEntityManagerRepository(EntityManagerFactory entityManagerFactory) {
 		this.entityManagerFactory = entityManagerFactory;
 	}
 
