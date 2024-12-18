@@ -2,7 +2,7 @@ package com.khadri.crud.operations.main;
 
 import java.util.Scanner;
 
-import com.khadri.crud.operations.entity.MobileEntity;
+import com.khadri.crud.operations.entity.Mobile;
 import com.khadri.crud.operations.repository.MobileEntityManagerRepository;
 
 import jakarta.persistence.EntityManagerFactory;
@@ -33,7 +33,7 @@ public class MobileEntityDriver {
 
 				System.out.println("Please enter mobile price to add");
 				double price = scanner.nextDouble();
-				MobileEntity mobile = mobileEntity.createMobile(null, name, phone, price);
+				Mobile mobile = mobileEntity.createMobile(null, name, phone, price);
 				repository.insertMobile(mobile);
 				break;
 			}
@@ -50,15 +50,15 @@ public class MobileEntityDriver {
 
 				System.out.println("Please enter mobile price to modify");
 				double price = scanner.nextDouble();
-				MobileEntity mobile = mobileEntity.createMobile(id, name, phone, price);
-				MobileEntity updateMobile = repository.updateMobile(mobile);
+				Mobile mobile = mobileEntity.createMobile(id, name, phone, price);
+				Mobile updateMobile = repository.updateMobile(mobile);
 				System.out.println("updateMobile");
 				break;
 			}
 			case "SELECT": {
 				System.out.println("Please enter mobile id to select");
 				Integer id = scanner.nextInt();
-				MobileEntity selectMobile = repository.selectMobile(id);
+				Mobile selectMobile = repository.selectMobile(id);
 				System.out.println("selectMobile");
 
 				break;
@@ -77,13 +77,12 @@ public class MobileEntityDriver {
 			}
 			System.out.println("Do You Want To Continue(YES/NO)?");
 			String decision = scanner.next();
-			
-			if(isContinue = decision.equalsIgnoreCase("YES")) {
+
+			if (isContinue = decision.equalsIgnoreCase("YES")) {
 				isContinue = true;
-			}else
-				if(isContinue = decision.equalsIgnoreCase("NO")) {
-					isContinue = false;
-				}
+			} else if (isContinue = decision.equalsIgnoreCase("NO")) {
+				isContinue = false;
+			}
 
 		} while (isContinue);
 
@@ -91,8 +90,8 @@ public class MobileEntityDriver {
 
 	}
 
-	private MobileEntity createMobile(Integer id, String name, Long phoneNumber, double price) {
-		MobileEntity mobile = new MobileEntity();
+	private Mobile createMobile(Integer id, String name, Long phoneNumber, double price) {
+		Mobile mobile = new Mobile();
 		mobile.setId(id);
 		mobile.setName(name);
 		mobile.setPhoneNumber(phoneNumber);
