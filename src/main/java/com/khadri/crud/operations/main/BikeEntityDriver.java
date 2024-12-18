@@ -1,19 +1,19 @@
-package com.khadri.crud.operations.main.bike;
+package com.khadri.crud.operations.main;
 
 import java.util.Scanner;
 
-import com.khadri.crud.operations.entity.bike.Bike;
-import com.khadri.crud.operations.repository.bike.BikeManagerRepository;
+import com.khadri.crud.operations.entity.Bike;
+import com.khadri.crud.operations.repository.BikeEntityManagerRepository;
 
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class BikeDriver {
+public class BikeEntityDriver {
 
 	public static void main(String[] args) {
-		BikeDriver driver = new BikeDriver();
+		BikeEntityDriver driver = new BikeEntityDriver();
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE_UNIT");
-		BikeManagerRepository repository = new BikeManagerRepository(entityManagerFactory);
+		BikeEntityManagerRepository repository = new BikeEntityManagerRepository(entityManagerFactory);
 		Scanner sc = new Scanner(System.in);
 		Boolean isContinue = false;
 		do {
@@ -27,7 +27,7 @@ public class BikeDriver {
 				String company = sc.next();
 				Bike bike = driver.createBike(null, name, company);
 				repository.insertBike(bike);
-				System.out.println(bike+"Bike inserted successfully!");
+				System.out.println(bike + "Bike inserted successfully!");
 
 			}
 				break;
@@ -47,13 +47,13 @@ public class BikeDriver {
 			case "select": {
 				System.out.println("please enter bike id");
 				Long id = sc.nextLong();
-			  repository.selectBike(id);
+				repository.selectBike(id);
 			}
 				break;
 			case "delete": {
 				System.out.println("Please enter bike id:");
 				Integer id = sc.nextInt();
-			repository.deleteBike(id);
+				repository.deleteBike(id);
 				System.out.println("Bike deleted successfully!");
 			}
 
@@ -73,13 +73,13 @@ public class BikeDriver {
 		sc.close();
 
 	}
-	 public Bike createBike(Integer id, String name, String company) {
-	        Bike bike = new Bike();
-	        bike.setId(id);
-	        bike.setName(name);
-	        bike.setCompany(company);
-	        return bike;
-	    }
 
+	public Bike createBike(Integer id, String name, String company) {
+		Bike bike = new Bike();
+		bike.setId(id);
+		bike.setName(name);
+		bike.setCompany(company);
+		return bike;
+	}
 
 }

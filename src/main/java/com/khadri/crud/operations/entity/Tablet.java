@@ -1,4 +1,4 @@
-package com.khadri.crud.operations.entity.pharmacy;
+package com.khadri.crud.operations.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,10 +14,11 @@ public class Tablet {
 	private int tabletQty;
 	private double tabletPrice;
 	
-	public int getId() {
+	 
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getTabletName() {

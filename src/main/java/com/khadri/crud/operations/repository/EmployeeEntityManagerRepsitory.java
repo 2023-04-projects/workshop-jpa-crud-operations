@@ -1,48 +1,49 @@
-package com.khadri.crud.operations.repository.bike;
+package com.khadri.crud.operations.repository;
 
-import com.khadri.crud.operations.entity.bike.Bike;
+import com.khadri.crud.operations.entity.Employee;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 
-public class BikeManagerRepository {
+public class EmployeeEntityManagerRepsitory {
+
 	private EntityManagerFactory entityManagerFactory;
 
-	public BikeManagerRepository(EntityManagerFactory entityManagerFactory) {
+	public EmployeeEntityManagerRepsitory(EntityManagerFactory entityManagerFactory) {
 		this.entityManagerFactory = entityManagerFactory;
 	}
 
-	public void insertBike(Bike bike) {
+	public void insertEmployee(Employee employee) {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
-		entityManager.persist(bike);
+		entityManager.persist(employee);
 		entityManager.getTransaction().commit();
-
 	}
 
-	public Bike updateBike(Bike bike) {
+	public Employee updateEmployee(Employee employee) {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
-		Bike updateBike = entityManager.merge(bike);
+		Employee updatedEmployee = entityManager.merge(employee);
 		entityManager.getTransaction().commit();
-		return updateBike;
-
+		return updatedEmployee;
 	}
 
-	public Bike selectBike(Long id) {
+	public Employee selectEmployee(Integer empId) {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
-		Bike selectBike = entityManager.find(Bike.class, id);
+		Employee updatedEmployee = entityManager.find(Employee.class, empId);
 		entityManager.getTransaction().commit();
-		return selectBike;
+		return updatedEmployee;
 	}
 
-	public void deleteBike(Integer id) {
+	public void deleteEmployee(Integer empId) {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
-		Bike deleteBike = entityManager.find(Bike.class, id);
-
-		entityManager.remove(deleteBike);
+		Employee emp=entityManager.find(Employee.class, empId);
+		if(emp!=null){
+			entityManager.remove(emp);
+			
+		}
 
 		entityManager.getTransaction().commit();
 	}
